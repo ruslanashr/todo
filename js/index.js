@@ -18,7 +18,7 @@ function addtodo(el) {
 }
 document.addEventListener("keyup",function(event){
     if(event.keyCode == 13){
-        const el = input.value;
+        const el = input.value.trim();
         if(el){
             addtodo(el);
         }
@@ -28,7 +28,7 @@ document.addEventListener("keyup",function(event){
 document.addEventListener("click", function(event){
     let button = event.target;
     const buttonclass = button.classList.contains('add');
-    const el = input.value;
+    const el = input.value.trim();
     if(buttonclass){
         addtodo(el);
         input.value = "";
