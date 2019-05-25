@@ -29,9 +29,11 @@ document.addEventListener("click", function(event){
     let button = event.target;
     const buttonclass = button.classList.contains('add');
     const el = input.value.trim();
-    if(buttonclass){
-        addtodo(el);
-        input.value = "";
+    if(el){
+        if(buttonclass){
+            addtodo(el);
+            input.value = "";
+        }
     }
 })
 
