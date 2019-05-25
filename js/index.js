@@ -1,5 +1,3 @@
-const add = document.querySelector('.add');
-const remove = document.querySelector('.btn-danger');
 var col_todo = document.querySelector('.col-todo');
 const input = document.querySelector('.form-control')
 
@@ -29,11 +27,11 @@ document.addEventListener("click", function(event){
     let button = event.target;
     const buttonclass = button.classList.contains('add');
     const el = input.value.trim();
-    if(el){
-        if(buttonclass){
+    if(buttonclass){
+        if(el){
             addtodo(el);
-            input.value = "";
         }
+        input.value = "";
     }
 })
 
